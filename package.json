@@ -1,0 +1,10 @@
+{
+  "name": "site-suecia",
+  "private": true,
+  "type": "module",
+  "description": "Página da Suécia Auto Center (sueciaautocenter.com.br)",
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "servir": "node ferramentas/servir-site.mjs"
+  }
+}

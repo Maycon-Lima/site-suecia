@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sueciaautocenter.com.br/sitemap.xml

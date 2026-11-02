@@ -1,0 +1,22 @@
+# Página da Suécia. Fica em /etc/caddy/sites/suecia-site.caddy no VPS; o Caddyfile principal
+# (repositório crm-suecia) inclui os arquivos dessa pasta com "import /etc/caddy/sites/*.caddy".
+sueciaautocenter.com.br {
+	root * /var/www/site
+	encode zstd gzip
+	header {
+		X-Content-Type-Options nosniff
+		Referrer-Policy strict-origin-when-cross-origin
+	}
+	# HTML e script sempre conferidos (mudam a cada publicação); imagens guardadas por 1 dia
+	@estatico path *.jpg *.png
+	header @estatico Cache-Control "public, max-age=86400"
+	header /index.html Cache-Control "no-cache"
+	header / Cache-Control "no-cache"
+	@script path *.js
+	header @script Cache-Control "no-cache"
+	file_server
+}
+
+www.sueciaautocenter.com.br {
+	redir https://sueciaautocenter.com.br{uri} permanent
+}

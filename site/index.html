@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Suécia Auto Center · Pneus, alinhamento, freios e revisão</title>
+  <meta name="description" content="Pneus, alinhamento e balanceamento, freios, suspensão e troca de óleo em Mogi Guaçu, Mogi Mirim, Estiva Gerbi e Itapira. Nota 4,9 no Google. Chame a loja mais perto no WhatsApp.">
+  <meta name="theme-color" content="#171717">
+  <meta name="color-scheme" content="dark">
+  <link rel="canonical" href="https://sueciaautocenter.com.br/">
+  <link rel="icon" href="/icone.png" type="image/png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Suécia Auto Center">
+  <meta property="og:description" content="Pneus, alinhamento, freios e revisão em 4 lojas na região. Nota 4,9 no Google.">
+  <meta property="og:url" content="https://sueciaautocenter.com.br/">
+  <meta property="og:image" content="https://sueciaautocenter.com.br/compartilhar.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <style>
+    :root {
+      --fundo: #171717; --faixa: #1e1e1e; --cartao: #242424; --borda: #343434;
+      --texto: #f4f4f4; --suave: #b9b9b9; --amarelo: #fff21a; --amarelo-texto: #171717;
+      --roxo: #a668ff; --roxo-claro: #c9a4ff; --verde: #3ddc97;
+      --raio: 14px; --largura: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; color-scheme: dark; -webkit-tap-highlight-color: rgba(166, 104, 255, .25); }
+    @media (max-width: 767px) { html { scroll-padding-bottom: 84px; } }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0; background: var(--fundo); color: var(--texto);
+      font: 400 1rem/1.6 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+      padding-bottom: calc(76px + env(safe-area-inset-bottom));
+    }
+    @media (min-width: 768px) { body { padding-bottom: 0; } }
+    img, svg { display: block; }
+    a { color: inherit; }
+    h1, h2, h3 { line-height: 1.15; margin: 0; text-wrap: balance; }
+    h2 { font-size: clamp(1.6rem, 4vw, 2.2rem); font-weight: 800; letter-spacing: -.02em; }
+    h3 { font-size: 1.15rem; font-weight: 700; }
+    p { margin: 0; }
+    .ic { width: 1.25em; height: 1.25em; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .container { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 0 16px; }
+    section { padding: 56px 0; scroll-margin-top: 72px; }
+    .faixa { background: var(--faixa); }
+    .chapeu { color: var(--roxo-claro); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px; }
+    .sub { color: var(--suave); margin-top: 8px; max-width: 46ch; }
+    :focus-visible { outline: 3px solid var(--roxo); outline-offset: 3px; border-radius: 6px; }
+    .pular { position: absolute; left: -9999px; }
+    .pular:focus { left: 16px; top: 16px; z-index: 100; background: var(--amarelo); color: var(--amarelo-texto); padding: 8px 12px; }
+
+    /* Botões */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 48px; padding: 12px 20px; border-radius: 12px; border: 0;
+      font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
+      touch-action: manipulation; transition: transform .15s, background-color .15s, border-color .15s;
+    }
+    .btn:active { transform: scale(.98); }
+    .btn-whats { background: var(--amarelo); color: var(--amarelo-texto); }
+    .btn-whats:hover { background: #fff76a; }
+    .btn-linha { background: transparent; color: var(--roxo-claro); border: 1.5px solid var(--roxo); }
+    .btn-linha:hover { background: rgba(166, 104, 255, .12); }
+    .btn-grande { font-size: 1.1rem; min-height: 56px; padding: 14px 28px; white-space: nowrap; }
+
+    /* Topo */
+    .topo { position: sticky; top: 0; z-index: 20; background: rgba(23, 23, 23, .94); border-bottom: 1px solid var(--borda); backdrop-filter: blur(8px); }
+    .topo .container { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 64px; }
+    .marca { display: flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; letter-spacing: .02em; }
+    .marca img { width: 130px; height: auto; }
+    .topo .btn { white-space: nowrap; min-height: 40px; padding: 8px 14px; font-size: .9rem; }
+
+    /* Título */
+    .hero { padding: 40px 0 0; overflow: hidden; }
+    .hero .container { display: grid; gap: 28px; align-items: center; }
+    .hero h1 { font-size: clamp(2.1rem, 7.5vw, 3.6rem); font-weight: 800; letter-spacing: -.03em; }
+    .hero h1 em { font-style: normal; color: var(--amarelo); }
+    .hero .sub { font-size: 1.1rem; margin-top: 14px; }
+    .hero .acoes { margin-top: 24px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+    .nota { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 4px 8px; color: var(--suave); text-decoration: none; }
+    .nota strong { color: var(--amarelo); font-size: 1.15rem; }
+    .nota .estrelas { color: var(--amarelo); letter-spacing: 1px; }
+    .hero-logo { justify-self: center; width: min(100%, 520px); height: auto; }
+    .rodagem { height: 18px; margin-top: 40px; opacity: .55;
+      background: repeating-linear-gradient(115deg, transparent 0 10px, var(--roxo) 10px 16px, transparent 16px 26px); }
+    @media (min-width: 860px) {
+      .hero { padding-top: 64px; }
+      .hero .container { grid-template-columns: 1.3fr 1fr; }
+      .hero .acoes { flex-direction: row; align-items: center; gap: 24px; }
+    }
+
+    /* Confiança */
+    .confianca { padding: 28px 0; }
+    .confianca ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
+    .confianca li { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: .95rem; line-height: 1.3; }
+    .confianca .ic { width: 28px; height: 28px; color: var(--roxo); }
+    @media (min-width: 860px) { .confianca ul { grid-template-columns: repeat(4, 1fr); } }
+
+    /* Serviços */
+    .grade { display: grid; gap: 16px; margin-top: 28px; }
+    @media (min-width: 640px) { .grade { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 1000px) { .grade-4 { grid-template-columns: repeat(4, 1fr); } }
+    .servico { background: var(--cartao); border: 1px solid var(--borda); border-top: 3px solid var(--roxo); border-radius: var(--raio); padding: 22px 20px; display: flex; flex-direction: column; gap: 14px; }
+    .servico .ic-grande { width: 40px; height: 40px; color: var(--roxo); fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .servico ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; color: var(--suave); font-size: .95rem; flex: 1; }
+    .servico li { display: flex; gap: 8px; }
+    .servico li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--amarelo); margin-top: .6em; flex: none; }
+    .servico .btn { width: 100%; }
+
+    /* Como funciona */
+    .passos { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 16px; counter-reset: passo; }
+    @media (min-width: 860px) { .passos { grid-template-columns: repeat(3, 1fr); } }
+    .passos li { counter-increment: passo; display: flex; gap: 16px; align-items: flex-start; background: var(--cartao); border: 1px solid var(--borda); border-radius: var(--raio); padding: 20px; }
+    .passos li::before { content: counter(passo); flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--roxo); color: #fff; font-weight: 800; font-size: 1.1rem; }
+    .passos strong { display: block; margin-bottom: 2px; }
+    .passos span { color: var(--suave); font-size: .95rem; }
+
+    /* Avaliações */
+    .avaliacoes-topo { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; }
+    .placar { display: flex; align-items: baseline; gap: 10px; }
+    .placar strong { font-size: 3rem; line-height: 1; color: var(--amarelo); font-weight: 800; }
+    .placar span { color: var(--suave); }
+    blockquote { margin: 0; background: var(--cartao); border: 1px solid var(--borda); border-radius: var(--raio); padding: 22px 20px; display: flex; flex-direction: column; gap: 12px; }
+    blockquote .estrelas { color: var(--amarelo); letter-spacing: 2px; }
+    blockquote p { font-size: 1.05rem; }
+    blockquote footer { color: var(--suave); font-size: .9rem; }
+    @media (min-width: 860px) { .grade-3 { grid-template-columns: repeat(3, 1fr); } }
+    .ver-google { margin-top: 20px; color: var(--suave); }
+    .ver-google a { color: var(--roxo-claro); display: inline-block; padding: 10px 2px; }
+
+    /* Lojas */
+    .loja { background: var(--cartao); border: 1px solid var(--borda); border-radius: var(--raio); padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; }
+    .loja-topo { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
+    .loja h3 { font-size: 1.35rem; }
+    .loja p { display: flex; gap: 10px; align-items: flex-start; color: var(--suave); }
+    .loja p .ic { color: var(--roxo); margin-top: .15em; }
+    .loja .btn-whats { margin-top: 8px; }
+    .loja-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .loja-links .btn { padding: 10px 8px; font-size: .92rem; }
+    .status { font-size: .8rem; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: #2e2e2e; color: var(--suave); white-space: nowrap; }
+    .status.aberta { background: rgba(61, 220, 151, .14); color: var(--verde); }
+    .status::before { content: "● "; }
+
+    /* Dúvidas */
+    .duvidas { margin-top: 24px; display: grid; gap: 10px; max-width: 760px; }
+    details { background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; }
+    summary { cursor: pointer; padding: 16px 20px; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
+    summary::-webkit-details-marker { display: none; }
+    summary::after { content: "+"; color: var(--roxo); font-size: 1.4rem; line-height: 1; }
+    details[open] summary::after { content: "–"; }
+    details p { padding: 0 20px 18px; color: var(--suave); }
+
+    /* Chamada final */
+    .final { text-align: center; }
+    .final .container { display: flex; flex-direction: column; align-items: center; gap: 18px; }
+    .final .sub { margin: 0 auto; }
+    .aviso { font-size: .9rem; color: var(--suave); border: 1px dashed var(--borda); border-radius: 12px; padding: 12px 16px; max-width: 560px; }
+
+    /* Rodapé */
+    .rodape { border-top: 1px solid var(--borda); padding: 28px 0; color: var(--suave); font-size: .9rem; }
+    .rodape .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+    .rodape a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--roxo-claro); min-height: 44px; }
+    .rodape .lema { color: var(--roxo-claro); font-style: italic; }
+
+    /* Barra fixa no celular */
+    .barra { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(23, 23, 23, .96); border-top: 1px solid var(--borda); }
+    .barra .btn { width: 100%; }
+    @media (min-width: 768px) { .barra { display: none; } }
+
+    /* Escolha da loja */
+    dialog { overscroll-behavior: contain; width: min(100% - 32px, 440px); padding: 0; border: 1px solid var(--borda); border-radius: 18px; background: var(--faixa); color: var(--texto); }
+    dialog::backdrop { background: rgba(0, 0, 0, .7); }
+    .escolha { padding: 22px 20px 20px; }
+    .escolha-topo { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+    .escolha h2 { font-size: 1.3rem; }
+    .escolha .sub { font-size: .95rem; margin-top: 4px; }
+    .fechar { background: none; border: 0; color: var(--suave); width: 44px; height: 44px; margin: -10px -10px 0 0; display: grid; place-items: center; cursor: pointer; border-radius: 10px; }
+    .fechar:hover { color: var(--texto); background: #2a2a2a; }
+    .escolha ul { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 10px; }
+    .escolha a { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; padding: 10px 16px; border-radius: 12px; background: var(--cartao); border: 1px solid var(--borda); text-decoration: none; font-weight: 700; }
+    .escolha a:hover { border-color: var(--amarelo); }
+    .escolha a .ic { color: var(--amarelo); width: 26px; height: 26px; }
+    .escolha a small { display: block; font-weight: 500; font-size: .8rem; color: var(--suave); }
+    .escolha a small.aberta { color: var(--verde); }
+  </style>
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <!-- Ícones Tabler (licença MIT, tabler.io/icons) -->
+    <symbol id="i-whats" viewBox="0 0 24 24"><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9"/><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1"/></symbol>
+    <symbol id="i-pneu" viewBox="0 0 24 24"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/><path d="M3 12h6"/><path d="M15 12h6"/><path d="M13.6 9.4l3.4 -4.8"/><path d="M10.4 14.6l-3.4 4.8"/><path d="M7 4.6l3.4 4.8"/><path d="M13.6 14.6l3.4 4.8"/></symbol>
+    <symbol id="i-volante" viewBox="0 0 24 24"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M12 14l0 7"/><path d="M10 12l-6.75 -2"/><path d="M14 12l6.75 -2"/></symbol>
+    <symbol id="i-freio" viewBox="0 0 24 24"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M7 12a5 5 0 0 1 5 -5"/><path d="M12 17a5 5 0 0 0 5 -5"/></symbol>
+    <symbol id="i-oleo" viewBox="0 0 24 24"><path d="M7.502 19.423c2.602 2.105 6.395 2.105 8.996 0c2.602 -2.105 3.262 -5.708 1.566 -8.546l-4.89 -7.26c-.42 -.625 -1.287 -.803 -1.936 -.397a1.376 1.376 0 0 0 -.41 .397l-4.893 7.26c-1.695 2.838 -1.035 6.441 1.567 8.546z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"/></symbol>
+    <symbol id="i-relogio" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 7v5l3 3"/></symbol>
+    <symbol id="i-estrela" viewBox="0 0 24 24"><path d="M12 17.75l-6.172 3.245l1.179 -6.873l-5 -4.867l6.9 -1l3.086 -6.253l3.086 6.253l6.9 1l-5 4.867l1.179 6.873z"/></symbol>
+    <symbol id="i-calendario" viewBox="0 0 24 24"><path d="M4 7a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12z"/><path d="M16 3v4"/><path d="M8 3v4"/><path d="M4 11h16"/><path d="M11 15h1"/><path d="M12 15v3"/></symbol>
+    <symbol id="i-orcamento" viewBox="0 0 24 24"><path d="M14 3v4a1 1 0 0 0 1 1h4"/><path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z"/><path d="M9 9l1 0"/><path d="M9 13l6 0"/><path d="M9 17l6 0"/></symbol>
+    <symbol id="i-garantia" viewBox="0 0 24 24"><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06"/><path d="M15 19l2 2l4 -4"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"/><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0"/><path d="M16.5 7.5v.01"/></symbol>
+    <symbol id="i-fechar" viewBox="0 0 24 24"><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></symbol>
+  </svg>
+
+  <a class="pular" href="#inicio">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container">
+      <a class="marca" href="#inicio" aria-label="Suécia Auto Center, início">
+        <img src="/logo-topo.png" alt="" width="130" height="46">
+      </a>
+      <a class="btn btn-whats" href="#lojas" data-escolher><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="container">
+        <div>
+          <p class="chapeu">Mogi Guaçu · Mogi Mirim · Estiva Gerbi · Itapira</p>
+          <h1>Pneus, alinhamento, freios e revisão <em>perto de você</em></h1>
+          <p class="sub">4 lojas na região. Chame a mais perto no WhatsApp e receba o orçamento por escrito.</p>
+          <div class="acoes">
+            <a class="btn btn-whats btn-grande" href="#lojas" data-escolher><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>Chamar no WhatsApp</a>
+            <a class="nota" href="#avaliacoes"><span class="estrelas" aria-hidden="true">★★★★★</span><strong>4,9</strong><span>no Google · mais de 1.800 avaliações</span></a>
+          </div>
+        </div>
+        <img class="hero-logo" src="/logo.png" alt="Suécia Auto Center: Quem conhece, confia." width="960" height="473" fetchpriority="high">
+      </div>
+      <div class="rodagem" aria-hidden="true"></div>
+    </section>
+
+    <section class="confianca faixa" aria-label="Por que a Suécia">
+      <div class="container">
+        <ul>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-calendario"/></svg>Desde 2012 cuidando do seu carro</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>4 lojas na região</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-orcamento"/></svg>Orçamento por escrito no WhatsApp</li>
+          <li><svg class="ic" aria-hidden="true"><use href="#i-garantia"/></svg>90 dias de garantia nos serviços</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="servicos">
+      <div class="container">
+        <p class="chapeu">Serviços</p>
+        <h2>Seu carro está pedindo?</h2>
+        <p class="sub">Se você notou algum destes sinais, é hora de passar na Suécia.</p>
+        <div class="grade grade-4">
+          <article class="servico">
+            <svg class="ic-grande" aria-hidden="true"><use href="#i-pneu"/></svg>
+            <h3>Pneus</h3>
+            <ul><li>Pneu careca ou com bolha</li><li>Perdendo calibragem toda semana</li><li>Carro escorregando na chuva</li></ul>
+            <a class="btn btn-linha" href="#lojas" data-escolher data-servico="pneus">Orçamento de pneus</a>
+          </article>
+          <article class="servico">
+            <svg class="ic-grande" aria-hidden="true"><use href="#i-volante"/></svg>
+            <h3>Alinhamento e balanceamento</h3>
+            <ul><li>Carro puxando para um lado</li><li>Volante torto ou vibrando</li><li>Pneu gastando só de um lado</li></ul>
+            <a class="btn btn-linha" href="#lojas" data-escolher data-servico="alinhamento e balanceamento">Orçamento de alinhamento</a>
+          </article>
+          <article class="servico">
+            <svg class="ic-grande" aria-hidden="true"><use href="#i-freio"/></svg>
+            <h3>Freios e suspensão</h3>
+            <ul><li>Chiado ou barulho ao frear</li><li>Pedal de freio baixo ou mole</li><li>Batidas e barulhos nos buracos</li></ul>
+            <a class="btn btn-linha" href="#lojas" data-escolher data-servico="freios e suspensão">Orçamento de freios</a>
+          </article>
+          <article class="servico">
+            <svg class="ic-grande" aria-hidden="true"><use href="#i-oleo"/></svg>
+            <h3>Troca de óleo e revisão</h3>
+            <ul><li>Passou do km ou do prazo da troca</li><li>Luz do óleo acesa no painel</li><li>Vai viajar e quer ir tranquilo</li></ul>
+            <a class="btn btn-linha" href="#lojas" data-escolher data-servico="troca de óleo e revisão">Orçamento de revisão</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="faixa">
+      <div class="container">
+        <p class="chapeu">Sem surpresa</p>
+        <h2>Como funciona</h2>
+        <ol class="passos">
+          <li><div><strong>Chame a loja mais perto</strong><span>Pelo WhatsApp, conte o que o carro está apresentando.</span></div></li>
+          <li><div><strong>Receba o orçamento por escrito</strong><span>Com as peças e a mão de obra, para você decidir com calma.</span></div></li>
+          <li><div><strong>Só fazemos depois que você aprovar</strong><span>E o serviço sai com 90 dias de garantia.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="avaliacoes">
+      <div class="container">
+        <div class="avaliacoes-topo">
+          <div>
+            <p class="chapeu">Avaliações no Google</p>
+            <h2>Quem conhece, confia</h2>
+          </div>
+          <div class="placar"><strong>4,9</strong><span>de 5 · mais de 1.800 avaliações nas 4 lojas</span></div>
+        </div>
+        <div class="grade grade-3">
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Atendimento rápido, transparente, honesto e muito profissional.”</p>
+            <footer>Erik · Mogi Mirim</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Atendimento excelente… preço justo e qualidade de primeira.”</p>
+            <footer>William · Itapira</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Atendimento excelente, equipe nota 1.000.”</p>
+            <footer>Tatiane · Mogi Guaçu</footer>
+          </blockquote>
+        </div>
+        <p class="ver-google">Ver todas no Google:
+          <a href="https://g.page/r/CeWJw97qz_ObEBM" target="_blank" rel="noopener">Mogi Guaçu</a> ·
+          <a href="https://g.page/r/CZyWIbWHRwn3EBM" target="_blank" rel="noopener">Mogi Mirim</a> ·
+          <a href="https://g.page/r/CVn16PKFaUGkEBM" target="_blank" rel="noopener">Estiva Gerbi</a> ·
+          <a href="https://g.page/r/CQVCdQf-F2wWEBM" target="_blank" rel="noopener">Itapira</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="lojas" class="faixa">
+      <div class="container">
+        <p class="chapeu">Nossas lojas</p>
+        <h2>Escolha a mais perto de você</h2>
+        <p class="sub">De segunda a sexta. Sábado e domingo fechado. Feriados: confirme pelo WhatsApp.</p>
+        <div class="grade">
+        <article class="loja" id="loja-guacu" data-loja="guacu">
+          <div class="loja-topo"><h3>Mogi Guaçu</h3><span class="status" data-status hidden></span></div>
+          <p class="endereco"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Av. Suécia, 1651 - Jardim Novo II</p>
+          <p class="horas"><svg class="ic" aria-hidden="true"><use href="#i-relogio"/></svg>Seg a sex, 8h às 18h30</p>
+          <p class="fone"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>(19) 3841-4481</p>
+          <a class="btn btn-whats" href="https://wa.me/551938414481?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp de Mogi Guaçu</a>
+          <div class="loja-links">
+            <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Su%C3%A9cia%20Auto%20Center%2C%20Av.%20Su%C3%A9cia%2C%201651%20-%20Jardim%20Novo%20II%2C%20Mogi%20Gua%C3%A7u%20-%20SP%2C%2013848-131" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+            <a class="btn btn-linha" href="https://g.page/r/CeWJw97qz_ObEBM" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-estrela"/></svg>Avaliações</a>
+          </div>
+        </article>
+        <article class="loja" id="loja-mirim" data-loja="mirim">
+          <div class="loja-topo"><h3>Mogi Mirim</h3><span class="status" data-status hidden></span></div>
+          <p class="endereco"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Av. Pedro Botesi, 2400 - Jardim Scomparim</p>
+          <p class="horas"><svg class="ic" aria-hidden="true"><use href="#i-relogio"/></svg>Seg a qui, 8h30 às 18h15 · sex até 18h</p>
+          <p class="fone"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>(19) 3811-8995</p>
+          <a class="btn btn-whats" href="https://wa.me/551938118995?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp de Mogi Mirim</a>
+          <div class="loja-links">
+            <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Su%C3%A9cia%20Auto%20Center%2C%20Av.%20Pedro%20Botesi%2C%202400%20-%20Jardim%20Scomparim%2C%20Mogi%20Mirim%20-%20SP%2C%2013806-635" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+            <a class="btn btn-linha" href="https://g.page/r/CZyWIbWHRwn3EBM" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-estrela"/></svg>Avaliações</a>
+          </div>
+        </article>
+        <article class="loja" id="loja-estiva" data-loja="estiva">
+          <div class="loja-topo"><h3>Estiva Gerbi</h3><span class="status" data-status hidden></span></div>
+          <p class="endereco"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Av. Dezenove de Maio, 2377</p>
+          <p class="horas"><svg class="ic" aria-hidden="true"><use href="#i-relogio"/></svg>Seg a sex, 8h30 às 18h30</p>
+          <p class="fone"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>(19) 3811-8994</p>
+          <a class="btn btn-whats" href="https://wa.me/551938118994?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp de Estiva Gerbi</a>
+          <div class="loja-links">
+            <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Su%C3%A9cia%20Auto%20Center%2C%20Av.%20Dezenove%20de%20Maio%2C%202377%2C%20Estiva%20Gerbi%20-%20SP%2C%2013857-000" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+            <a class="btn btn-linha" href="https://g.page/r/CVn16PKFaUGkEBM" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-estrela"/></svg>Avaliações</a>
+          </div>
+        </article>
+        <article class="loja" id="loja-itapira" data-loja="itapira">
+          <div class="loja-topo"><h3>Itapira</h3><span class="status" data-status hidden></span></div>
+          <p class="endereco"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Av. dos Italianos, 2022 - Centro</p>
+          <p class="horas"><svg class="ic" aria-hidden="true"><use href="#i-relogio"/></svg>Seg a sex, 9h às 18h</p>
+          <p class="fone"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>(19) 99706-5251</p>
+          <a class="btn btn-whats" href="https://wa.me/5519997065251?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>WhatsApp de Itapira</a>
+          <div class="loja-links">
+            <a class="btn btn-linha" href="https://www.google.com/maps/dir/?api=1&amp;destination=Su%C3%A9cia%20Auto%20Center%2C%20Av.%20dos%20Italianos%2C%202022%20-%20Centro%2C%20Itapira%20-%20SP%2C%2013970-080" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-pin"/></svg>Como chegar</a>
+            <a class="btn btn-linha" href="https://g.page/r/CQVCdQf-F2wWEBM" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-estrela"/></svg>Avaliações</a>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="duvidas">
+      <div class="container">
+        <p class="chapeu">Dúvidas</p>
+        <h2>Perguntas frequentes</h2>
+        <div class="duvidas">
+          <details><summary>Qual é a garantia?</summary><p>Todos os serviços feitos na Suécia têm 90 dias de garantia.</p></details>
+          <details><summary>Quais formas de pagamento vocês aceitam?</summary><p>Pix, cartão de crédito, cartão de débito e dinheiro.</p></details>
+          <details><summary>Vocês abrem no sábado?</summary><p>Não. As 4 lojas atendem de segunda a sexta. O horário de cada uma está em <a href="#lojas">Nossas lojas</a>. Em feriados, confirme pelo WhatsApp da loja.</p></details>
+          <details><summary>Como peço um orçamento?</summary><p>Chame a loja mais perto no WhatsApp e conte o que o carro está apresentando (para pneus, mande a medida escrita na lateral do pneu). Você recebe o orçamento por escrito e decide com calma.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="final faixa">
+      <div class="container">
+        <h2>Seu carro em boas mãos, perto de você</h2>
+        <p class="sub">Mogi Guaçu, Mogi Mirim, Estiva Gerbi e Itapira.</p>
+        <a class="btn btn-whats btn-grande" href="#lojas" data-escolher><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>Chamar no WhatsApp</a>
+        <a class="nota" href="#avaliacoes"><span class="estrelas" aria-hidden="true">★★★★★</span><strong>4,9</strong><span>no Google · mais de 1.800 avaliações</span></a>
+        <p class="aviso">Atenção: a Suécia só atende pelos números desta página e dos nossos perfis no Google.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container">
+      <p>Suécia Auto Center · desde 2012 · <span class="lema">Quem conhece, confia.</span></p>
+      <a href="https://www.instagram.com/sueciaautocenteroficial" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg>@sueciaautocenteroficial</a>
+    </div>
+  </footer>
+
+  <div class="barra">
+    <a class="btn btn-whats" href="#lojas" data-escolher><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>Chamar no WhatsApp</a>
+  </div>
+
+  <dialog id="escolha" aria-labelledby="escolha-titulo">
+    <div class="escolha">
+      <div class="escolha-topo">
+        <div>
+          <h2 id="escolha-titulo">Qual loja fica mais perto de você?</h2>
+          <p class="sub">A conversa abre no WhatsApp com a mensagem pronta.</p>
+        </div>
+        <button class="fechar" type="button" data-fechar aria-label="Fechar"><svg class="ic" aria-hidden="true"><use href="#i-fechar"/></svg></button>
+      </div>
+      <ul data-opcoes></ul>
+    </div>
+  </dialog>
+
+  <script type="application/ld+json">[{"@context":"https://schema.org","@type":"AutoRepair","name":"Suécia Auto Center Mogi Guaçu","url":"https://sueciaautocenter.com.br/","image":"https://sueciaautocenter.com.br/logo.png","telephone":"+551938414481","address":{"@type":"PostalAddress","streetAddress":"Av. Suécia, 1651","addressLocality":"Mogi Guaçu","addressRegion":"SP","postalCode":"13848-131","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"08:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"08:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"08:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"08:00","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"18:30"}],"sameAs":["https://g.page/r/CeWJw97qz_ObEBM"]},{"@context":"https://schema.org","@type":"AutoRepair","name":"Suécia Auto Center Mogi Mirim","url":"https://sueciaautocenter.com.br/","image":"https://sueciaautocenter.com.br/logo.png","telephone":"+551938118995","address":{"@type":"PostalAddress","streetAddress":"Av. Pedro Botesi, 2400","addressLocality":"Mogi Mirim","addressRegion":"SP","postalCode":"13806-635","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"08:30","closes":"18:15"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"08:30","closes":"18:15"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"08:30","closes":"18:15"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"08:30","closes":"18:15"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:30","closes":"18:00"}],"sameAs":["https://g.page/r/CZyWIbWHRwn3EBM"]},{"@context":"https://schema.org","@type":"AutoRepair","name":"Suécia Auto Center Estiva Gerbi","url":"https://sueciaautocenter.com.br/","image":"https://sueciaautocenter.com.br/logo.png","telephone":"+551938118994","address":{"@type":"PostalAddress","streetAddress":"Av. Dezenove de Maio, 2377","addressLocality":"Estiva Gerbi","addressRegion":"SP","postalCode":"13857-000","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"08:30","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"08:30","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"08:30","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"08:30","closes":"18:30"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:30","closes":"18:30"}],"sameAs":["https://g.page/r/CVn16PKFaUGkEBM"]},{"@context":"https://schema.org","@type":"AutoRepair","name":"Suécia Auto Center Itapira","url":"https://sueciaautocenter.com.br/","image":"https://sueciaautocenter.com.br/logo.png","telephone":"+5519997065251","address":{"@type":"PostalAddress","streetAddress":"Av. dos Italianos, 2022","addressLocality":"Itapira","addressRegion":"SP","postalCode":"13970-080","addressCountry":"BR"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"09:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"09:00","closes":"18:00"}],"sameAs":["https://g.page/r/CQVCdQf-F2wWEBM"]}]</script>
+  <script type="module">
+    import { LOJAS, linkWhatsApp, situacao } from "./lojas.js";
+
+    const escolha = document.getElementById("escolha");
+    const opcoes = escolha.querySelector("[data-opcoes]");
+
+    // Selo "aberta agora / fechada" de cada cartão, atualizado a cada minuto
+    function atualizarSelos() {
+      const agora = new Date();
+      for (const loja of LOJAS) {
+        const selo = document.querySelector(`#loja-${loja.id} [data-status]`);
+        if (!selo) continue;
+        const s = situacao(loja, agora);
+        selo.textContent = s.texto;
+        selo.classList.toggle("aberta", s.aberta);
+        selo.hidden = false;
+      }
+    }
+
+    function abrirEscolha(servico) {
+      const agora = new Date();
+      opcoes.replaceChildren(...LOJAS.map(loja => {
+        const s = situacao(loja, agora);
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.href = linkWhatsApp(loja, servico);
+        a.target = "_blank";
+        a.rel = "noopener";
+        const nome = document.createElement("span");
+        nome.textContent = loja.cidade;
+        const sit = document.createElement("small");
+        sit.textContent = s.texto;
+        sit.className = s.aberta ? "aberta" : "";
+        nome.append(sit);
+        a.append(nome);
+        a.insertAdjacentHTML("beforeend", '<svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>');
+        a.addEventListener("click", () => escolha.close());
+        li.append(a);
+        return li;
+      }));
+      escolha.showModal();
+    }
+
+    document.addEventListener("click", ev => {
+      const botao = ev.target.closest("[data-escolher]");
+      if (botao && typeof escolha.showModal === "function") {
+        ev.preventDefault();
+        abrirEscolha(botao.dataset.servico);
+      }
+      if (ev.target.closest("[data-fechar]") || ev.target === escolha) escolha.close();
+    });
+
+    atualizarSelos();
+    setInterval(atualizarSelos, 60000);
+  </script>
+</body>
+</html>
