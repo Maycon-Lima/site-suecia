@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Suécia Auto Center · Pneus, alinhamento, freios e revisão</title>
-  <meta name="description" content="Pneus, alinhamento e balanceamento, freios, suspensão e troca de óleo em Mogi Guaçu, Mogi Mirim, Estiva Gerbi e Itapira. Nota 4,9 no Google. Chame a loja mais perto no WhatsApp.">
+  <title>Suécia Auto Center · Pneus, suspensão, freios e mecânica em geral</title>
+  <meta name="description" content="Pneus, suspensão, freios e mecânica em geral, alinhamento e balanceamento e troca de óleo em Mogi Guaçu, Mogi Mirim, Estiva Gerbi e Itapira. Nota 4,9 no Google. Chame a loja mais perto no WhatsApp.">
   <meta name="theme-color" content="#171717">
   <meta name="color-scheme" content="dark">
   <link rel="canonical" href="https://sueciaautocenter.com.br/">
@@ -13,7 +13,7 @@
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Suécia Auto Center">
-  <meta property="og:description" content="Pneus, alinhamento, freios e revisão em 4 lojas na região. Nota 4,9 no Google.">
+  <meta property="og:description" content="Pneus, suspensão, freios e mecânica em geral em 4 lojas na região. Nota 4,9 no Google.">
   <meta property="og:url" content="https://sueciaautocenter.com.br/">
   <meta property="og:image" content="https://sueciaautocenter.com.br/compartilhar.jpg">
   <meta property="og:image:width" content="1200">
@@ -21,12 +21,12 @@
   <style>
     :root {
       --fundo: #171717; --faixa: #1e1e1e; --cartao: #242424; --borda: #343434;
-      --texto: #f4f4f4; --suave: #b9b9b9; --amarelo: #fff21a; --amarelo-texto: #171717;
-      --roxo: #a668ff; --roxo-claro: #c9a4ff; --verde: #3ddc97;
+      --texto: #f4f4f4; --suave: #b9b9b9; --amarelo: #fccb3a; --amarelo-texto: #171717;
+      --amarelo-claro: #ffda6b; --verde: #3ddc97;
       --raio: 14px; --largura: 1120px;
     }
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; color-scheme: dark; -webkit-tap-highlight-color: rgba(166, 104, 255, .25); }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; -webkit-text-size-adjust: 100%; color-scheme: dark; -webkit-tap-highlight-color: rgba(252, 203, 58, .25); }
     @media (max-width: 767px) { html { scroll-padding-bottom: 84px; } }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
     body {
@@ -45,9 +45,9 @@
     .container { width: 100%; max-width: var(--largura); margin: 0 auto; padding: 0 16px; }
     section { padding: 56px 0; scroll-margin-top: 72px; }
     .faixa { background: var(--faixa); }
-    .chapeu { color: var(--roxo-claro); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px; }
+    .chapeu { color: var(--amarelo); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin-bottom: 8px; }
     .sub { color: var(--suave); margin-top: 8px; max-width: 46ch; }
-    :focus-visible { outline: 3px solid var(--roxo); outline-offset: 3px; border-radius: 6px; }
+    :focus-visible { outline: 3px solid var(--amarelo); outline-offset: 3px; border-radius: 6px; }
     .pular { position: absolute; left: -9999px; }
     .pular:focus { left: 16px; top: 16px; z-index: 100; background: var(--amarelo); color: var(--amarelo-texto); padding: 8px 12px; }
 
@@ -60,9 +60,9 @@
     }
     .btn:active { transform: scale(.98); }
     .btn-whats { background: var(--amarelo); color: var(--amarelo-texto); }
-    .btn-whats:hover { background: #fff76a; }
-    .btn-linha { background: transparent; color: var(--roxo-claro); border: 1.5px solid var(--roxo); }
-    .btn-linha:hover { background: rgba(166, 104, 255, .12); }
+    .btn-whats:hover { background: var(--amarelo-claro); }
+    .btn-linha { background: transparent; color: var(--amarelo); border: 1.5px solid var(--amarelo); }
+    .btn-linha:hover { background: rgba(252, 203, 58, .12); }
     .btn-grande { font-size: 1.1rem; min-height: 56px; padding: 14px 28px; white-space: nowrap; }
 
     /* Topo */
@@ -75,7 +75,7 @@
     /* Título */
     .hero { padding: 40px 0 0; overflow: hidden; }
     .hero .container { display: grid; gap: 28px; align-items: center; }
-    .hero h1 { font-size: clamp(2.1rem, 7.5vw, 3.6rem); font-weight: 800; letter-spacing: -.03em; }
+    .hero h1 { font-size: clamp(1.9rem, 7.5vw, 3.4rem); font-weight: 800; letter-spacing: -.01em; text-transform: uppercase; }
     .hero h1 em { font-style: normal; color: var(--amarelo); }
     .hero .sub { font-size: 1.1rem; margin-top: 14px; }
     .hero .acoes { margin-top: 24px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
@@ -84,7 +84,7 @@
     .nota .estrelas { color: var(--amarelo); letter-spacing: 1px; }
     .hero-logo { justify-self: center; width: min(100%, 520px); height: auto; }
     .rodagem { height: 18px; margin-top: 40px; opacity: .55;
-      background: repeating-linear-gradient(115deg, transparent 0 10px, var(--roxo) 10px 16px, transparent 16px 26px); }
+      background: repeating-linear-gradient(115deg, transparent 0 10px, var(--amarelo) 10px 16px, transparent 16px 26px); }
     @media (min-width: 860px) {
       .hero { padding-top: 64px; }
       .hero .container { grid-template-columns: 1.3fr 1fr; }
@@ -95,15 +95,15 @@
     .confianca { padding: 28px 0; }
     .confianca ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px 16px; }
     .confianca li { display: flex; align-items: center; gap: 12px; font-weight: 600; font-size: .95rem; line-height: 1.3; }
-    .confianca .ic { width: 28px; height: 28px; color: var(--roxo); }
+    .confianca .ic { width: 28px; height: 28px; color: var(--amarelo); }
     @media (min-width: 860px) { .confianca ul { grid-template-columns: repeat(4, 1fr); } }
 
     /* Serviços */
     .grade { display: grid; gap: 16px; margin-top: 28px; }
     @media (min-width: 640px) { .grade { grid-template-columns: 1fr 1fr; } }
     @media (min-width: 1000px) { .grade-4 { grid-template-columns: repeat(4, 1fr); } }
-    .servico { background: var(--cartao); border: 1px solid var(--borda); border-top: 3px solid var(--roxo); border-radius: var(--raio); padding: 22px 20px; display: flex; flex-direction: column; gap: 14px; }
-    .servico .ic-grande { width: 40px; height: 40px; color: var(--roxo); fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+    .servico { background: var(--cartao); border: 1px solid var(--borda); border-top: 3px solid var(--amarelo); border-radius: var(--raio); padding: 22px 20px; display: flex; flex-direction: column; gap: 14px; }
+    .servico .ic-grande { width: 40px; height: 40px; color: var(--amarelo); fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
     .servico ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 6px; color: var(--suave); font-size: .95rem; flex: 1; }
     .servico li { display: flex; gap: 8px; }
     .servico li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--amarelo); margin-top: .6em; flex: none; }
@@ -113,7 +113,7 @@
     .passos { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 16px; counter-reset: passo; }
     @media (min-width: 860px) { .passos { grid-template-columns: repeat(3, 1fr); } }
     .passos li { counter-increment: passo; display: flex; gap: 16px; align-items: flex-start; background: var(--cartao); border: 1px solid var(--borda); border-radius: var(--raio); padding: 20px; }
-    .passos li::before { content: counter(passo); flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--roxo); color: #fff; font-weight: 800; font-size: 1.1rem; }
+    .passos li::before { content: counter(passo); flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--amarelo); color: var(--amarelo-texto); font-weight: 800; font-size: 1.1rem; }
     .passos strong { display: block; margin-bottom: 2px; }
     .passos span { color: var(--suave); font-size: .95rem; }
 
@@ -126,16 +126,26 @@
     blockquote .estrelas { color: var(--amarelo); letter-spacing: 2px; }
     blockquote p { font-size: 1.05rem; }
     blockquote footer { color: var(--suave); font-size: .9rem; }
-    @media (min-width: 860px) { .grade-3 { grid-template-columns: repeat(3, 1fr); } }
-    .ver-google { margin-top: 20px; color: var(--suave); }
-    .ver-google a { color: var(--roxo-claro); display: inline-block; padding: 10px 2px; }
+    /* Faixa de avaliações: sem JS (ou com movimento reduzido) rola com o dedo; com JS anda sozinha e para no toque/mouse */
+    .carrossel { margin-top: 28px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 16px 8px; }
+    .trilho { display: flex; gap: 16px; width: max-content; }
+    .trilho blockquote { width: 290px; flex: none; scroll-snap-align: start; }
+    @media (min-width: 860px) { .trilho blockquote { width: 340px; } }
+    .carrossel.anima { overflow: hidden; padding: 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+    .carrossel.anima .trilho { padding-right: 16px; animation: rolar 90s linear infinite; }
+    .carrossel.anima:hover .trilho, .carrossel.anima:focus-within .trilho, .carrossel.pausado .trilho { animation-play-state: paused; }
+    @keyframes rolar { to { transform: translateX(-50%); } }
+    .carrossel-rodape { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin-top: 16px; }
+    .pausar { min-height: 40px; padding: 8px 16px; font-size: .9rem; }
+    .ver-google { color: var(--suave); }
+    .ver-google a { color: var(--amarelo); display: inline-block; padding: 10px 2px; }
 
     /* Lojas */
     .loja { background: var(--cartao); border: 1px solid var(--borda); border-radius: var(--raio); padding: 22px 20px; display: flex; flex-direction: column; gap: 10px; }
     .loja-topo { display: flex; align-items: center; justify-content: space-between; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
     .loja h3 { font-size: 1.35rem; }
     .loja p { display: flex; gap: 10px; align-items: flex-start; color: var(--suave); }
-    .loja p .ic { color: var(--roxo); margin-top: .15em; }
+    .loja p .ic { color: var(--amarelo); margin-top: .15em; }
     .loja .btn-whats { margin-top: 8px; }
     .loja-links { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .loja-links .btn { padding: 10px 8px; font-size: .92rem; }
@@ -148,7 +158,7 @@
     details { background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; }
     summary { cursor: pointer; padding: 16px 20px; font-weight: 700; list-style: none; display: flex; justify-content: space-between; gap: 12px; }
     summary::-webkit-details-marker { display: none; }
-    summary::after { content: "+"; color: var(--roxo); font-size: 1.4rem; line-height: 1; }
+    summary::after { content: "+"; color: var(--amarelo); font-size: 1.4rem; line-height: 1; }
     details[open] summary::after { content: "–"; }
     details p { padding: 0 20px 18px; color: var(--suave); }
 
@@ -161,8 +171,8 @@
     /* Rodapé */
     .rodape { border-top: 1px solid var(--borda); padding: 28px 0; color: var(--suave); font-size: .9rem; }
     .rodape .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
-    .rodape a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--roxo-claro); min-height: 44px; }
-    .rodape .lema { color: var(--roxo-claro); font-style: italic; }
+    .rodape a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--amarelo); min-height: 44px; }
+    .rodape .lema { color: var(--amarelo); font-style: italic; }
 
     /* Barra fixa no celular */
     .barra { position: fixed; left: 0; right: 0; bottom: 0; z-index: 30; padding: 10px 16px calc(10px + env(safe-area-inset-bottom)); background: rgba(23, 23, 23, .96); border-top: 1px solid var(--borda); }
@@ -220,7 +230,7 @@
       <div class="container">
         <div>
           <p class="chapeu">Mogi Guaçu · Mogi Mirim · Estiva Gerbi · Itapira</p>
-          <h1>Pneus, alinhamento, freios e revisão <em>perto de você</em></h1>
+          <h1>Pneus, suspensão, freios e mecânica em geral <em>perto de você</em></h1>
           <p class="sub">4 lojas na região. Chame a mais perto no WhatsApp e receba o orçamento por escrito.</p>
           <div class="acoes">
             <a class="btn btn-whats btn-grande" href="#lojas" data-escolher><svg class="ic" aria-hidden="true"><use href="#i-whats"/></svg>Chamar no WhatsApp</a>
@@ -298,11 +308,23 @@
           </div>
           <div class="placar"><strong>4,9</strong><span>de 5 · mais de 1.800 avaliações nas 4 lojas</span></div>
         </div>
-        <div class="grade grade-3">
+      </div>
+      <div class="carrossel" data-carrossel role="region" aria-label="Avaliações de clientes no Google">
+        <div class="trilho" data-trilho>
           <blockquote>
             <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
             <p>“Atendimento rápido, transparente, honesto e muito profissional.”</p>
             <footer>Erik · Mogi Mirim</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Atendimento excelente, equipe nota 1.000.”</p>
+            <footer>Tatiane · Mogi Guaçu</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Ótimo atendimento, equipe qualificada e preço justo.”</p>
+            <footer>Josué · Estiva Gerbi</footer>
           </blockquote>
           <blockquote>
             <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
@@ -311,10 +333,63 @@
           </blockquote>
           <blockquote>
             <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
-            <p>“Atendimento excelente, equipe nota 1.000.”</p>
-            <footer>Tatiane · Mogi Guaçu</footer>
+            <p>“São muito atenciosos, gentis e a mecânica é de total confiança.”</p>
+            <footer>Larissa · Mogi Mirim</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Atendimento muito bom, preço justo, e qualidade no serviço!”</p>
+            <footer>Aislan · Mogi Guaçu</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Profissionais atenciosos, pontuais e comprometidos com a qualidade.”</p>
+            <footer>Liure · Estiva Gerbi</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Trabalho justo e de confiança.”</p>
+            <footer>Denis · Itapira</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Serviço muito bem feito e atendimento excelente.”</p>
+            <footer>Claudia · Mogi Mirim</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Ótimo atendimento e preço justo.”</p>
+            <footer>Luemer · Mogi Guaçu</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Excelente atendimento, muito atenciosos e honestos!”</p>
+            <footer>Carol · Estiva Gerbi</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Minha experiência foi excelente! O ambiente é muito agradável…”</p>
+            <footer>Milly · Itapira</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Atendimento excelente… atenderam com competência.”</p>
+            <footer>Mary · Mogi Guaçu</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Ótimo atendimento, profissional excelente e capacitado.”</p>
+            <footer>Luis Antonio · Estiva Gerbi</footer>
+          </blockquote>
+          <blockquote>
+            <span class="estrelas" role="img" aria-label="5 estrelas">★★★★★</span>
+            <p>“Ótimo atendimento, ótimo trabalho. Pessoal super atencioso.”</p>
+            <footer>Denison · Itapira</footer>
           </blockquote>
         </div>
+      </div>
+      <div class="container carrossel-rodape">
+        <button class="btn btn-linha pausar" type="button" data-pausar aria-pressed="false" hidden>Pausar</button>
         <p class="ver-google">Ver todas no Google:
           <a href="https://g.page/r/CeWJw97qz_ObEBM" target="_blank" rel="noopener">Mogi Guaçu</a> ·
           <a href="https://g.page/r/CZyWIbWHRwn3EBM" target="_blank" rel="noopener">Mogi Mirim</a> ·
@@ -481,6 +556,25 @@
 
     atualizarSelos();
     setInterval(atualizarSelos, 60000);
+
+    // Faixa de avaliações andando sozinha (duplica os cartões para dar a volta sem emenda)
+    const carrossel = document.querySelector("[data-carrossel]");
+    if (carrossel && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const trilho = carrossel.querySelector("[data-trilho]");
+      for (const cartao of [...trilho.children]) {
+        const copia = cartao.cloneNode(true);
+        copia.setAttribute("aria-hidden", "true");
+        trilho.append(copia);
+      }
+      carrossel.classList.add("anima");
+      const pausar = document.querySelector("[data-pausar]");
+      pausar.hidden = false;
+      pausar.addEventListener("click", () => {
+        const parado = carrossel.classList.toggle("pausado");
+        pausar.setAttribute("aria-pressed", String(parado));
+        pausar.textContent = parado ? "Continuar" : "Pausar";
+      });
+    }
   </script>
 </body>
 </html>

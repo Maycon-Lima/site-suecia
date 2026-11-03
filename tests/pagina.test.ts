@@ -33,6 +33,14 @@ describe("cartões das lojas no HTML", () => {
     const sec = html.match(/<section id="avaliacoes"[\s\S]*?<\/section>/)![0];
     for (const loja of LOJAS) expect(sec).toContain(`href="${attr(loja.google)}"`);
   });
+  it("a faixa de avaliações tem as 15 do Google, cada uma com nome e loja, e um botão de pausar", () => {
+    const sec = html.match(/<section id="avaliacoes"[\s\S]*?<\/section>/)![0];
+    const lojas = [...sec.matchAll(/<footer>[^<]*· ([^<]+)<\/footer>/g)].map(m => m[1].trim());
+    expect(lojas.length).toBe(15);
+    for (const l of lojas) expect(LOJAS.some(x => x.cidade === l)).toBe(true);
+    for (const loja of LOJAS) expect(lojas.filter(l => l === loja.cidade).length >= 3).toBe(true);
+    expect(sec).toContain("data-pausar");
+  });
   it("avisa que em feriado é preciso confirmar", () => {
     const sec = html.match(/<section id="lojas"[\s\S]*?<\/section>/)![0];
     expect(sec).toContain("Feriados: confirme pelo WhatsApp");

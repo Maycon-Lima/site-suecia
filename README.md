@@ -26,8 +26,8 @@ chamar no WhatsApp com a mensagem pronta. Página estática, sem bibliotecas, ho
   baterem, o teste avisa.
 - **Cores:** no começo de `site/index.html`, em `:root`:
   - `--fundo` `#171717`;
-  - `--amarelo` `#fff21a` (botões de WhatsApp, escolhido pelo dono; a logo usa `#fccb3a`);
-  - `--roxo` `#a668ff` (detalhes).
+  - `--amarelo` `#fccb3a`, a mesma cor da logo, nos botões e em todos os detalhes (o dono pediu tudo nessa cor);
+  - `--amarelo-claro` `#ffda6b` (botão com o mouse em cima).
 
 ## Publicar
 
