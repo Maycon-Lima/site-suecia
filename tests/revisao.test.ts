@@ -39,13 +39,23 @@ describe("página /revisao", () => {
     expect(html).toContain('name="description" content="Revisão completa por R$ 29,90 | Suécia Auto Center"');
     expect(html).toContain('property="og:image" content="https://sueciaautocenter.com.br/revisao/revisao-2990-capa.jpg"');
   });
-  it("o vídeo só baixa ao dar play e não toca sozinho", () => {
+  it("o vídeo tem controles e capa, e sem o script espera o play com som", () => {
     const v = html.match(/<video[^>]*>/)![0];
     expect(v).toContain("controls");
     expect(v).toContain("playsinline");
     expect(v).toContain('preload="metadata"');
     expect(v).toContain('poster="revisao-2990-capa.jpg"');
-    expect(v.includes("autoplay")).toBe(false);
+    expect(v.includes("muted")).toBe(false);
+  });
+  it("o vídeo começa sozinho sem som, com botão para ligar o som", () => {
+    expect(html).toContain("video.muted = true");
+    expect(html).toContain("video.play()");
+    expect(html).toContain("Ligar o som");
+    expect(/<button[^>]*data-som[^>]*hidden/.test(html)).toBe(true);
+  });
+  it("o vídeo respeita quem pede menos movimento ou economia de dados, e não fica mudo se não tocar", () => {
+    expect(html).toContain("navigator.connection?.saveData");
+    expect(html).toContain("catch(() => { video.muted = false; })");
   });
   it("não usa a frase retirada a pedido do dono", () => {
     expect(html.includes("pente fino")).toBe(false);

@@ -72,7 +72,12 @@
     .topo .sub { color: var(--suave); font-size: 1.1rem; margin: 16px 0 24px; max-width: 54ch; }
 
     /* Vídeo */
-    .topo video { width: 100%; max-width: 420px; height: auto; aspect-ratio: 9 / 16; margin: 0 auto; border-radius: 18px; background: #000; }
+    .video { position: relative; width: 100%; max-width: 420px; margin: 0 auto; }
+    .video video { width: 100%; height: auto; aspect-ratio: 9 / 16; border-radius: 18px; background: #000; }
+    .som { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 8px 18px; background: var(--amarelo); color: #171717; border: 0; border-radius: 999px; font: inherit; font-weight: 700; white-space: nowrap; cursor: pointer; touch-action: manipulation; }
+    .som[hidden] { display: none; }
+    .som svg { width: 20px; height: 20px; }
+    .som:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
 
     /* Como funciona */
     .passos { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 14px; }
@@ -151,9 +156,12 @@
         <p class="sub">Você vê tudo o que conferimos no seu carro: são mais de 70 itens, mostrados pessoalmente, por foto ou por vídeo. Sem surpresa, para o dia a dia ou antes de pegar a estrada.</p>
         <a class="btn btn-whats btn-grande" href="#lojas">Agendar minha revisão</a>
         </div>
-        <video controls playsinline preload="metadata" poster="revisao-2990-capa.jpg" width="720" height="1280" aria-label="Vídeo sobre a revisão completa da Suécia Auto Center">
-          <source src="revisao-2990-video.mp4" type="video/mp4">
-        </video>
+        <div class="video">
+          <video data-video controls playsinline preload="metadata" poster="revisao-2990-capa.jpg" width="720" height="1280" aria-label="Vídeo sobre a revisão completa da Suécia Auto Center">
+            <source src="revisao-2990-video.mp4" type="video/mp4">
+          </video>
+          <button class="som" type="button" data-som hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4 4 0 0 0-2-3.5v7a4 4 0 0 0 2-3.5zm-2-7.8v2.1a7 7 0 0 1 0 11.4v2.1a9 9 0 0 0 0-15.6z"/></svg>Ligar o som</button>
+        </div>
       </div>
     </header>
 
@@ -318,6 +326,21 @@
       if (!link || !window.fbq) return;
       const cidade = link.dataset.cidade;
       fbq("track", "Contact", { content_name: cidade });
+    });
+
+    // Vídeo começa sozinho e sem som (os navegadores só deixam assim). O botão liga o som e volta ao começo.
+    // Quem pede menos movimento ou economia de dados não baixa os 13 MB sem querer.
+    const video = document.querySelector("[data-video]");
+    const som = document.querySelector("[data-som]");
+    if (!matchMedia("(prefers-reduced-motion: reduce)").matches && !navigator.connection?.saveData) {
+      video.muted = true;
+      video.play().then(() => { som.hidden = false; }).catch(() => { video.muted = false; });
+    }
+    video.addEventListener("volumechange", () => { if (!video.muted) som.hidden = true; });
+    som.addEventListener("click", () => {
+      video.muted = false;
+      video.currentTime = 0;
+      video.play();
     });
 
     // Faixa de avaliações andando sozinha (duplica os cartões para dar a volta sem emenda)

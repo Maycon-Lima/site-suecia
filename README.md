@@ -24,7 +24,8 @@ chamar no WhatsApp com a mensagem pronta. Página estática, sem bibliotecas, ho
 - `/`: página inicial.
 - `/revisao/`: oferta da revisão de R$ 29,90, para os anúncios do Instagram/Facebook. Tem cópias próprias dos cartões das
   lojas (com a mensagem do anúncio) e das avaliações; `npm test` confere com `lojas.js` e com a página inicial.
-  O vídeo é uma conversão do original do iPhone para H.264 em 720×1280.
+  O vídeo é uma conversão do original do iPhone para H.264 em 720×1280. Começa sozinho e sem som (regra dos navegadores),
+  com o botão "Ligar o som"; não começa para quem pediu menos movimento ou economia de dados no aparelho.
 - `/privacidade/`: política de privacidade.
 
 **Meta Pixel:** fica em `site/pixel.js`, carregado no `<head>` de todas as páginas, com a faixa de aceite. Só liga depois
