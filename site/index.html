@@ -18,6 +18,7 @@
   <meta property="og:image" content="https://sueciaautocenter.com.br/compartilhar.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
+  <script src="/pixel.js"></script>
   <style>
     :root {
       --fundo: #171717; --faixa: #1e1e1e; --cartao: #242424; --borda: #343434;
@@ -172,6 +173,8 @@
     .rodape { border-top: 1px solid var(--borda); padding: 28px 0; color: var(--suave); font-size: .9rem; }
     .rodape .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
     .rodape a { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: var(--amarelo); min-height: 44px; }
+    .rodape .priv { flex-basis: 100%; display: flex; flex-wrap: wrap; align-items: center; gap: 0 18px; margin: 0; }
+    .rodape .priv button { background: none; border: 0; padding: 0; min-height: 44px; color: var(--amarelo); font: inherit; cursor: pointer; }
     .rodape .lema { color: var(--amarelo); font-style: italic; }
 
     /* Barra fixa no celular */
@@ -481,6 +484,7 @@
     <div class="container">
       <p>Suécia Auto Center · desde 2012 · <span class="lema">Quem conhece, confia.</span></p>
       <a href="https://www.instagram.com/sueciaautocenteroficial" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true"><use href="#i-instagram"/></svg>@sueciaautocenteroficial</a>
+      <p class="priv"><a href="/privacidade/">Política de privacidade</a><button type="button" data-privacidade hidden>Preferências de privacidade</button></p>
     </div>
   </footer>
 

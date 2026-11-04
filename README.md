@@ -19,9 +19,21 @@ chamar no WhatsApp com a mensagem pronta. Página estática, sem bibliotecas, ho
   - `marca/`: a logo original.
 - `docs/projeto.md` e `docs/plano.md`: o que foi combinado com o dono e como foi feito (02/11/2026).
 
+## Páginas
+
+- `/`: página inicial.
+- `/revisao/`: oferta da revisão de R$ 29,90, para os anúncios do Instagram/Facebook. Tem cópias próprias dos cartões das
+  lojas (com a mensagem do anúncio) e das avaliações; `npm test` confere com `lojas.js` e com a página inicial.
+  O vídeo é uma conversão do original do iPhone para H.264 em 720×1280.
+- `/privacidade/`: política de privacidade.
+
+**Meta Pixel:** fica em `site/pixel.js`, carregado no `<head>` de todas as páginas, com a faixa de aceite. Só liga depois
+de "Aceitar" (escolha guardada no aparelho; "Preferências de privacidade" no rodapé troca). Para mudar o Pixel, troque
+`PIXEL_ID` nesse arquivo. Na `/revisao/`, cada clique em um WhatsApp de loja dispara `Contact` com a cidade em `content_name`.
+
 ## Mudar um dado de loja ou as cores
 
-- **Loja (telefone, endereço, horário):** mudar em `site/lojas.js` **e** no cartão da loja em `site/index.html` (os
+- **Loja (telefone, endereço, horário):** mudar em `site/lojas.js` **e** nos cartões da loja em `site/index.html` e `site/revisao/index.html` (os
   cartões ficam escritos no HTML para a página funcionar mesmo sem JavaScript). Depois rodar `npm test`: se os dois não
   baterem, o teste avisa.
 - **Cores:** no começo de `site/index.html`, em `:root`:

@@ -7,11 +7,15 @@ sueciaautocenter.com.br {
 		X-Content-Type-Options nosniff
 		Referrer-Policy strict-origin-when-cross-origin
 	}
-	# HTML e script sempre conferidos (mudam a cada publicação); imagens guardadas por 1 dia
-	@estatico path *.jpg *.png
+	# HTML e script sempre conferidos (mudam a cada publicação); imagens e vídeo guardados por 1 dia
+	@estatico path *.jpg *.png *.mp4
 	header @estatico Cache-Control "public, max-age=86400"
 	header /index.html Cache-Control "no-cache"
 	header / Cache-Control "no-cache"
+	header /revisao/ Cache-Control "no-cache"
+	header /revisao/index.html Cache-Control "no-cache"
+	header /privacidade/ Cache-Control "no-cache"
+	header /privacidade/index.html Cache-Control "no-cache"
 	@script path *.js
 	header @script Cache-Control "no-cache"
 	file_server

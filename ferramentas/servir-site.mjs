@@ -9,7 +9,7 @@ const RAIZ = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../site
 const PORTA = Number(process.argv[2]) || 8780;
 const TIPOS = {
   ".html": "text/html; charset=utf-8", ".js": "text/javascript; charset=utf-8", ".jpg": "image/jpeg",
-  ".png": "image/png", ".txt": "text/plain; charset=utf-8", ".xml": "application/xml; charset=utf-8",
+  ".png": "image/png", ".mp4": "video/mp4", ".txt": "text/plain; charset=utf-8", ".xml": "application/xml; charset=utf-8",
 };
 
 createServer(async (req, res) => {
